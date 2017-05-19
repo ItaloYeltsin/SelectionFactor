@@ -1,0 +1,6 @@
+dependencies {
+    compile (
+            [group: 'org.uma.jmetal', name: 'jmetal-core', version: '5.2'],
+            [group: 'org.uma.jmetal', name: 'jmetal-algorithm', version: '5.2']
+    )
+}
