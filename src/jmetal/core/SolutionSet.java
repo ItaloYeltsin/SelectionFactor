@@ -234,15 +234,36 @@ public class SolutionSet implements Serializable {
   public void printObjectivesToFile(String path){
     try {
       /* Open the file */
-      FileOutputStream fos   = new FileOutputStream(path)     ;
+      FileOutputStream fos   = new FileOutputStream(path,true)     ;
       OutputStreamWriter osw = new OutputStreamWriter(fos)    ;
       BufferedWriter bw      = new BufferedWriter(osw)        ;
 
       for (Solution aSolutionsList_ : solutionsList_) {
-        //if (this.vector[i].getFitness()<1.0) {
         bw.write(aSolutionsList_.toString());
         bw.newLine();
-        //}
+      }
+
+      /* Close the file */
+      bw.close();
+    }catch (IOException e) {
+      Configuration.logger_.severe("Error acceding to the file");
+      e.printStackTrace();
+    }
+  } // printObjectivesToFile
+
+
+  public void printObjectivesToFile(String path,double[] abs,int cont){
+    try {
+      /* Open the file */
+      FileOutputStream fos   = new FileOutputStream(path,true)     ;
+      OutputStreamWriter osw = new OutputStreamWriter(fos)    ;
+      BufferedWriter bw      = new BufferedWriter(osw)        ;
+
+      for (Solution aSolutionsList_ : solutionsList_) {
+        for (int i = 0; i < cont; i++) {
+          bw.write(abs[i]+" ");
+        }
+        bw.newLine();
       }
 
       /* Close the file */
@@ -260,7 +281,7 @@ public class SolutionSet implements Serializable {
    */
   public void printVariablesToFile(String path){
     try {
-      FileOutputStream fos   = new FileOutputStream(path)     ;
+      FileOutputStream fos   = new FileOutputStream(path,true)     ;
       OutputStreamWriter osw = new OutputStreamWriter(fos)    ;
       BufferedWriter bw      = new BufferedWriter(osw)        ;            
 

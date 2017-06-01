@@ -91,7 +91,7 @@ public class gGA extends Algorithm {
     population.sort(comparator) ;
     while (evaluations < maxEvaluations) {
       if ((evaluations % 10) == 0) {
-        System.out.println(evaluations + ": " + population.get(0).getObjective(0)) ;
+        //System.out.println(evaluations + ": " + population.get(0).getObjective(0)) ;
       } //
 
       // Copy the best two individuals to the offspring population
@@ -136,7 +136,7 @@ public class gGA extends Algorithm {
     SolutionSet resultPopulation = new SolutionSet(1) ;
     resultPopulation.add(population.get(0)) ;
 
-    System.out.println("Evaluations: " + evaluations ) ;
+    //System.out.println("Evaluations: " + evaluations ) ;
     return resultPopulation ;
   } // execute
 } // gGA

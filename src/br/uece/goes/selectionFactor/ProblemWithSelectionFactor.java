@@ -1,6 +1,5 @@
 package br.uece.goes.selectionFactor;
 
-import br.uece.goes.selectionFactor.Evaluator;
 import jmetal.core.Problem;
 import jmetal.core.Solution;
 import jmetal.core.SolutionSet;
@@ -26,6 +25,12 @@ public abstract class ProblemWithSelectionFactor extends Problem {
     public void setEvaluatorWeight(int index, double weight) {
         weights_.set(index, weight);
     }
+
+    public int getNumberOfEvaluation() {
+        return evaluators_.size();
+
+    }
+
     public void removeEvaluator(int index) {
         evaluators_.remove(index);
         weights_.remove(index);
@@ -93,7 +98,7 @@ public abstract class ProblemWithSelectionFactor extends Problem {
     }
 
     @Override
-    public void evaluate(Solution solution) {
+    public void evaluate(Solution solution) throws JMException {
         throw new RuntimeException("Cannot use this method" +
                 " for classes that extends"+this.getClass().getName());
     }

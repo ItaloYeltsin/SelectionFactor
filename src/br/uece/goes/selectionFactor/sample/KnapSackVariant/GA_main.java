@@ -32,6 +32,7 @@ import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
 import jmetal.util.JMException;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -42,7 +43,7 @@ import java.util.HashMap;
  */
 public class GA_main {
 
-  public static void main(String [] args) throws JMException, ClassNotFoundException {
+  public static void main(String [] args) throws JMException, ClassNotFoundException, IOException {
     Problem problem   ;         // The problem to solve
     Algorithm algorithm ;         // The algorithm to use
     Operator crossover ;         // Crossover operator
@@ -52,7 +53,6 @@ public class GA_main {
     //int bits ; // Length of bit string in the OneMax problem
     HashMap  parameters ; // Operator parameters
     problem = new KnapSackVariantProblem();
-
 
     algorithm = new br.uece.goes.selectionFactor.sample.KnapSackVariant.gGA(problem) ; // Generational GA
 
