@@ -84,6 +84,7 @@ public class OrderOneCrossover extends Crossover {
           Solution parent2) throws JMException {
     Solution [] offSpring = new Solution[2];
     offSpring[0] = new Solution(parent1);
+    offSpring[1] = offSpring[0];
 
       if (PseudoRandom.randDouble() < probability) {  
     	  Variable [] vars = offSpring[0].getDecisionVariables();
@@ -138,7 +139,7 @@ public class OrderOneCrossover extends Crossover {
               parents[0].getType() + " and " +
               parents[1].getType() + " are obtained");
 
-      Class cls = java.lang.String.class;
+      Class cls = String.class;
       String name = cls.getName();
       throw new JMException("Exception in " + name + ".execute()");
     } // if
@@ -146,7 +147,7 @@ public class OrderOneCrossover extends Crossover {
     if (parents.length < 2) {
       Configuration.logger_.severe("OrderOneCrossover.execute: operator " +
               "needs two parents");
-      Class cls = java.lang.String.class;
+      Class cls = String.class;
       String name = cls.getName();
       throw new JMException("Exception in " + name + ".execute()");
     } 
@@ -157,7 +158,7 @@ public class OrderOneCrossover extends Crossover {
             parents[1]);
 
     
-    return offSpring[0];
+    return offSpring;
   } // execute
   
 } // OrderOneCrossover

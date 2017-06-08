@@ -23,7 +23,10 @@ package br.uece.goes.selectionFactor.test;
 
 import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
 import br.uece.goes.selectionFactor.sample.KnapSackVariant.gGA;
-import jmetal.core.*;
+import jmetal.core.Algorithm;
+import jmetal.core.Operator;
+import jmetal.core.Problem;
+import jmetal.core.SolutionSet;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
@@ -39,7 +42,7 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class GA_test {
+public class GA_test2 {
 
   public void main(String problemName,String complement,int cont,int cont2) throws JMException, ClassNotFoundException, IOException {
 
@@ -49,16 +52,16 @@ public class GA_test {
 
     ProblemWithSelectionFactor problemSelectionFactor = (ProblemWithSelectionFactor) problem;
 
-    double[] absoluteValue = new double[cont2];
+    double[] value = new double[cont2];
 
     for (int i = 0; i < cont2; i++) {
-      absoluteValue[i] = problemSelectionFactor.getEvaluator(i).evaluate(population.get(0));
-      System.out.println(absoluteValue[i]);
+      value[i] = problemSelectionFactor.getEvaluator(i).evaluate(population.get(0));
+      System.out.println(value[i]);
     }
 
         /* Log messages */
     new File("results").mkdirs();
-    population.printObjectivesToFile("results/"+problemName+complement+"_FUN.txt",absoluteValue);
+    population.printObjectivesToFile("results/"+problemName+complement+"_FUN.txt",value);
     population.printVariablesToFile("results/"+problemName+complement+"_VAR.txt");
 
   } //main
@@ -67,7 +70,6 @@ public class GA_test {
   Problem configProblem(String problemName,int index) throws IOException {
 
     Problem problem=null ;
-    ProblemWithSelectionFactor problemSelectionFactor;         // The problem to solve
 
     if(problemName=="Priorization"){
       problem = new PriorizationProblem("dataset_inst100.txt");
@@ -76,60 +78,23 @@ public class GA_test {
       problem = new ReleasePlanningProblem("src\\instances\\data-set-1.rp");
     }
 
-    problemSelectionFactor = (ProblemWithSelectionFactor) problem;
-
-    int t = problemSelectionFactor.getNumberOfEvaluation();
-    System.out.println("numero de avaliadores:::"+t);
-
-    try{
-    if(index==0){
-      problemSelectionFactor.removeEvaluator(1);
-      //problemSelectionFactor.removeEvaluator(1);
-    }
-
-    if(index==1){
-      problemSelectionFactor.removeEvaluator(0);
-      //problemSelectionFactor.removeEvaluator(1);
-    }
-
-    if(index==2){
-      problemSelectionFactor.removeEvaluator(0);
-      problemSelectionFactor.removeEvaluator(0);
-    }
-
-    }catch (Exception e){
-      System.out.println(e);
-    }
-
-//      for (int i = 0; i < t; i++) {
-//          try{
-//              if(i!=index && index!=-1) {
-//                System.out.println("removeu:::"+i);
-//                  problemSelectionFactor.removeEvaluator(i);
-//              }
-//          }catch (Exception e){
-//              System.out.println(e+":::tentou remover:::"+i+"index::: "+index);
-//          }
-//
-//      }
-
     return problem;
 
   }
 
   SolutionSet configAlgorithm(String problemName,Problem problem) throws JMException, ClassNotFoundException {
 
-    Algorithm algorithm =null;         // The algorithm to use
+    Algorithm algorithm;         // The algorithm to use
     Operator crossover =null ;         // Crossover operator
     Operator mutation =null ;         // Mutation operator
     Operator  selection;         // Selection operator
     HashMap  parameters ; // Operator parameters
 
-    algorithm = new gGA(problem) ; // Generational GA
+    algorithm = new jmetal.metaheuristics.singleObjective.geneticAlgorithm.gGA(problem); // Generational GA
 
         /* Algorithm parameters*/
     algorithm.setInputParameter("populationSize", 100);
-    algorithm.setInputParameter("maxEvaluations", 100000);
+    algorithm.setInputParameter("maxEvaluations", 1000);
 
     if(problemName=="ReleasePlanning") {
 
@@ -166,10 +131,6 @@ public class GA_test {
 
 
     return algorithm.execute();
-
-
   }
-
-
 
 } // GA_main

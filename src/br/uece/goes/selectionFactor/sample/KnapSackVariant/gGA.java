@@ -107,8 +107,8 @@ public class gGA extends Algorithm {
         parents[1] = (Solution)selectionOperator.execute(population);
  
         // Crossover
-        Solution [] offspring = (Solution []) crossoverOperator.execute(parents);                
-          
+        Solution [] offspring = (Solution []) crossoverOperator.execute(parents);
+
         // Mutation
         mutationOperator.execute(offspring[0]);
         mutationOperator.execute(offspring[1]);

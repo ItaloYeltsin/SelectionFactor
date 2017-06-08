@@ -2,24 +2,400 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ee5817-511b-4829-a2d9-feb4cf8efbba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FUN" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VAR" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/min/ReleasePlanning_FUN.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/min/ReleasePlanning_VAR.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test2.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/Evaluator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/Algorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/Operator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/Problem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/Solution.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/SolutionSet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/SolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/core/Variable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/ArrayIntSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/ArrayRealAndBinarySolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/ArrayRealSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/BinaryRealSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/BinarySolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/IntRealSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/IntSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/PermutationSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/solutionType/RealSolutionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/ArrayInt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/ArrayReal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/Binary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/BinaryReal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/Int.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/Permutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/encodings/variable/Real.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/Experiment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/MainC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/SettingsFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/AbYSS_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/CellDE_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/FastSMSEMOA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/GDE3_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/GWASFGA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/IBEA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/MOCHC_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/MOCell_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/MOEAD_DRA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/MOEAD_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/NSGAIIAdaptive_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/NSGAIIBinary_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/NSGAIIPermutation_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/NSGAIIRandom_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/NSGAII_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/OMOPSO_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/PAES_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/RandomSearch_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/SMPSO_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/SMPSOhv_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/SMSEMOA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/SPEA2_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/WASFGA_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/cMOEAD_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/dMOPSO_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/pMOEAD_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/pNSGAII_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/settings/pSMPSO_Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/ConstrainedProblemsStudy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/GWASFGAStudy3D.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/NSGAIIStudy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/StandardStudy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/StandardStudy2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/WASFGAStudy2D.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/ZDTStudy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/ZDTStudy2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/jMetalExperiment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/studies/pMOEADStudy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/Friedman.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/Pareja.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/RBoxplot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/RWilcoxon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/RunExperiment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/experiments/util/Statistics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/abyss/AbYSS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/abyss/AbYSS_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/cellde/CellDE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/cellde/CellDE_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/densea/DENSEA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/densea/DENSEA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/dmopso/dMOPSO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/dmopso/dMOPSO_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/fastPGA/FastPGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/fastPGA/FastPGA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/gde3/GDE3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/gde3/GDE3_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/gwasfga/GWASFGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/gwasfga/GWASFGA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/ibea/IBEA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/ibea/IBEA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/MOCell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/MOCell_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/aMOCell1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/aMOCell2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/aMOCell3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/sMOCell1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mocell/sMOCell2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mochc/MOCHC.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/mochc/MOCHC_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/MOEAD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/MOEAD_DRA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/MOEAD_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/cMOEAD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/pMOEAD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/moead/pMOEAD_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAII.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAIIAdaptive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAIIAdaptive_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAIIRandom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAII_mTSP_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/NSGAII_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/pNSGAII.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/pNSGAII_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/ssNSGAII.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/ssNSGAIIAdaptive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/nsgaII/ssNSGAIIRandom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/omopso/OMOPSO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/omopso/OMOPSO_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/paes/PAES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/paes/PAES_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/pesa2/PESA2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/pesa2/PESA2_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/randomSearch/RandomSearch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/randomSearch/RandomSearch_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/cmaes/CMAES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/cmaes/CMAES_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/cmaes/Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/differentialEvolution/DE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/differentialEvolution/DE_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/evolutionStrategy/ES_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/evolutionStrategy/ElitistES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/evolutionStrategy/NonElitistES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/GA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/TSPGA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/acGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/pgGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/pgGA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/scGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/geneticAlgorithm/ssGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/SMPSO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/SMPSO_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/SMPSOhv.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/SMPSOhv_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/pSMPSO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smpso/pSMPSO_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smsemoa/FastSMSEMOA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smsemoa/SMSEMOA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/smsemoa/SMSEMOA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/spea2/SPEA2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/spea2/SPEA2_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/wasfga/WASFGA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/metaheuristics/wasfga/WASFGA_main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/BLXAlphaCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/Crossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/CrossoverFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/DifferentialEvolutionCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/HUXCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/PMXCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/SBXCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/SBXSinglePointCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/SinglePointCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/crossover/TwoPointsCrossover.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/localSearch/LocalSearch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/localSearch/MutationLocalSearch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/BitFlipMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/Mutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/MutationFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/NonUniformMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/PolynomialBitFlipMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/PolynomialMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/SwapMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/mutation/UniformMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/BestSolutionSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/BinaryTournament.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/BinaryTournament2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/DifferentialEvolutionSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/PESA2Selection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/RandomSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/RankingAndCrowdingSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/Selection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/SelectionFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/operators/selection/WorstSolutionSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Binh2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ConstrEx.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/DTLZ/DTLZ7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/EBEs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Fonseca.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/FourBarTruss.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Golinski.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/IntRealProblem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Kursawe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/LZ09/LZ09_F9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/OKA1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/OKA2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/OneZeroMax.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Osyczka2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Poloni.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ProblemFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Schaffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Srinivas.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Tanaka.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Viennet2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Viennet3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Viennet4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/Shapes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/Transformations.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/WFG/WFG9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/Water.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/ZDT/ZDT6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/cec2009Competition/UF9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/mTSP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/mqap/ReadInstance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/mqap/mQAP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/Griewank.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/OneMax.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/ProblemWithSelectionFactor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/Rastrigin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/Rosenbrock.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/Sphere.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/problems/singleObjective/TSP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/Epsilon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/GeneralizedSpread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/GenerationalDistance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/Hypervolume.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/InvertedGenerationalDistance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/QualityIndicator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/R2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/Spread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/FastHypervolume.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/FastHypervolumeArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/wfg/Front.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/wfg/Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/wfg/PointComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/fastHypervolume/wfg/WFGHV.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/util/LexicoGraphicalComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/util/MetricsUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/qualityIndicator/util/ValueComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/AchievementScalarizingFunction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/AdaptiveGrid.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Configuration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Distance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/DistanceNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/DistanceNodeComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ExtractParetoFront$Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ExtractParetoFront.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/FPGAFitness.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/IRandomGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/JMException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/MersenneTwisterFast.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Neighborhood$Row.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Neighborhood.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/NonDominatedSolutionList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/NonDominatedSolutionList2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ParetoDominance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Permutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/PermutationUtility.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/PropUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/PseudoRandom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/RandomGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Ranking.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/RankingASFs$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/RankingASFs$Node.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/RankingASFs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ReferencePoint$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ReferencePoint$ReferencePointType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/ReferencePoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Spea2Fitness.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/Weights.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/AdaptiveGridArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/Archive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/CrowdingArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/HypervolumeArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/R2Archive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/SPEA2DensityArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/StrengthRawFitnessArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/archive/WFGHypervolumeArchive.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/avl/AvlNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/avl/AvlTree.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/AggregativeComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/BinaryTournamentComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/CrowdingComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/CrowdingDistanceComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/DistanceToPopulationComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/DominanceComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/EpsilonDominanceComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/EpsilonObjectiveComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/EqualSolutions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/FPGAFitnessComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/FitnessAndCrowdingDistanceComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/FitnessComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/IConstraintViolationComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/NumberOfViolatedConstraintComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/ObjectiveComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/OverallConstraintViolationComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/RankComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/SolutionComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/comparators/ViolationThresholdComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/BLXAlphaCrossoverAndPolynomialMutation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/BLXAlphaCrossoverOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/DifferentialEvolutionOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/DifferentialEvolutionOffspring2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/DifferentialEvolutionOffspringPolynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/NonUniformMutationOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/Offspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/PolynomialMutationOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/SBXCrossoverAndPolynomialMutationOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/offspring/SBXCrossoverOffspring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/parallel/IParallelEvaluator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/parallel/MultithreadedEvaluator$EvaluationTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/parallel/MultithreadedEvaluator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/wrapper/XInt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jmetal/util/wrapper/XReal.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/SelectionFactor.tar" afterPath="$PROJECT_DIR$/build/distributions/SelectionFactor.tar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/SelectionFactor.zip" afterPath="$PROJECT_DIR$/build/distributions/SelectionFactor.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/SelectionFactor.jar" afterPath="$PROJECT_DIR$/build/libs/SelectionFactor.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$1.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$2.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$3.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/core/SolutionSet.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/core/SolutionSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/operators/crossover/CrossoverFactory.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/operators/crossover/CrossoverFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/operators/mutation/MutationFactory.class" afterPath="$PROJECT_DIR$/out/production/SelectionFactor/jmetal/operators/mutation/MutationFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SelectionFactor.iml" afterPath="$PROJECT_DIR$/SelectionFactor.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java" afterPath="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/core/SolutionSet.java" afterPath="$PROJECT_DIR$/src/jmetal/core/SolutionSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.java" afterPath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/operators/crossover/CrossoverFactory.java" afterPath="$PROJECT_DIR$/src/jmetal/operators/crossover/CrossoverFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/operators/crossover/OrderOneCrossover.java" afterPath="$PROJECT_DIR$/src/jmetal/operators/crossover/OrderOneCrossover.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/operators/mutation/MutationFactory.java" afterPath="$PROJECT_DIR$/src/jmetal/operators/mutation/MutationFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/operators/mutation/RankSwapMutation.java" afterPath="$PROJECT_DIR$/src/jmetal/operators/mutation/RankSwapMutation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jmetal/problems/singleObjective/ProblemWithSelectionFactor.java" afterPath="$PROJECT_DIR$/src/jmetal/problems/singleObjective/ProblemWithSelectionFactor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -49,26 +425,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GA_test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GA_test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="99" column="25" lean-forward="true" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="93" />
               <folding>
+                <element signature="method#configProblem#0;class#GA_test#0" expanded="false" />
                 <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java">
+      <file leaf-file-name="GA_test2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -314,12 +699,21 @@
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/PriorizationProblem.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main_test.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java" />
-        <option value="$PROJECT_DIR$/src/jmetal/core/SolutionSet.java" />
+        <option value="$PROJECT_DIR$/SelectionFactor.iml" />
+        <option value="$PROJECT_DIR$/src/jmetal/operators/crossover/CrossoverFactory.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/operators/mutation/MutationFactory.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/operators/crossover/OrderOneCrossover.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java" />
+        <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem2.java" />
+        <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem2.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java" />
-        <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/operators/mutation/RankSwapMutation.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/core/SolutionSet.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java" />
         <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java" />
+        <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.java" />
+        <option value="$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test2.java" />
       </list>
     </option>
   </component>
@@ -332,8 +726,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -351,7 +745,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,6 +755,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SelectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmetal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,10 +830,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selectionFactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KnapSackVariant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,17 +863,22 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/build.gradle" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.uece.goes.selectionFactor.test" />
       <recent name="br.uece.goes.selectionFactor.sample.KnapSackVariant" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphael\IdeaProjects\SelectionFactor\src\jmetal\operators\mutation" />
+      <recent name="C:\Users\Raphael\IdeaProjects\SelectionFactor\src\jmetal\encodings\solutionType" />
+      <recent name="C:\Users\Raphael\IdeaProjects\SelectionFactor\src\jmetal\operators\crossover" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -484,26 +923,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="br.uece.goes.selectionFactor.test.GA_test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="SelectionFactor" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="br.uece.goes.selectionFactor.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="br.uece.goes.selectionFactor.test.main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -925,16 +1344,35 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.uece.goes.selectionFactor.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.uece.goes.selectionFactor.test.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SelectionFactor" />
+      <envs />
+      <method />
+    </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.GA_main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GA_test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.main" />
+      <item index="0" class="java.lang.String" itemvalue="Application.main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GA_main" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GA_test" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GA_test" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GA_main" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.GA_test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GA_main" />
       </list>
     </recent_temporary>
   </component>
@@ -957,12 +1395,28 @@
       <workItem from="1496074765748" duration="1537000" />
       <workItem from="1496082202851" duration="4902000" />
       <workItem from="1496246349651" duration="1808000" />
-      <workItem from="1496276331151" duration="13963000" />
+      <workItem from="1496276331151" duration="14037000" />
+      <workItem from="1496335160691" duration="1308000" />
+      <workItem from="1496356163159" duration="821000" />
+      <workItem from="1496357423635" duration="146000" />
+      <workItem from="1496359548149" duration="904000" />
+      <workItem from="1496360503207" duration="10609000" />
+      <workItem from="1496802758891" duration="3799000" />
+      <workItem from="1496851530342" duration="5260000" />
+      <workItem from="1496952995723" duration="590000" />
     </task>
+    <task id="LOCAL-00001" summary="Adição de problemas para avaliação e configuração do GA para execução">
+      <created>1496294760422</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496294760422</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54332000" />
+    <option name="totallyTimeSpent" value="77843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -974,25 +1428,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31744313" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31527627" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31423897" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13432837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1000,13 +1452,15 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39770868" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1041,9 +1495,21 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adição de problemas para avaliação e configuração do GA para execução" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adição de problemas para avaliação e configuração do GA para execução" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1052,233 +1518,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="63" lean-forward="false" selection-start-line="146" selection-start-column="63" selection-end-line="146" selection-end-column="63" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="5" lean-forward="true" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setSimulator#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readDescriptions#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readRiskAndCost#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readParameters#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getReleases#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRequirements#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/SolutionSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4420">
-          <caret line="260" column="14" lean-forward="false" selection-start-line="260" selection-start-column="14" selection-end-line="260" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="34" lean-forward="false" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setSimulator#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readDescriptions#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readRiskAndCost#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readParameters#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getReleases#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRequirements#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/SolutionSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4420">
-          <caret line="260" column="14" lean-forward="false" selection-start-line="260" selection-start-column="14" selection-end-line="260" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="8" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="34" lean-forward="false" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setSimulator#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readDescriptions#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readRiskAndCost#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readParameters#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getReleases#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRequirements#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
+            <element signature="method#configProblem#0;class#GA_test#0" expanded="false" />
             <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
           </folding>
         </state>
@@ -1288,11 +1533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,25 +1540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
           <caret line="106" column="34" lean-forward="true" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setSimulator#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readDescriptions#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readRiskAndCost#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readParameters#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getReleases#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRequirements#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1387,20 +1608,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/Evaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/main/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.class" />
     <entry file="file://$PROJECT_DIR$/src/jmetal/problems/singleObjective/ProblemWithSelectionFactor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1408,24 +1616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="148" column="42" lean-forward="false" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/KnapSackVariantProblem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1444,13 +1638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jmetal/experiments/MainC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1458,88 +1645,221 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/GA_main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectionFactor.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/crossover/BLXAlphaCrossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1666">
+          <caret line="58" column="11" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/crossover/HUXCrossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1445">
+          <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="144" column="12" lean-forward="false" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/mutation/MutationFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/encodings/solutionType/IntSolutionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/encodings/solutionType/RankPermutationSolutionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/util/RandomGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/util/PseudoRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/crossover/CrossoverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/mutation/SwapMutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/crossover/OrderOneCrossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="115" column="113" lean-forward="false" selection-start-line="115" selection-start-column="113" selection-end-line="115" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/Evaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem2.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem2.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2036">
+          <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/operators/mutation/RankSwapMutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/encodings/variable/Int.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/ReleasePlanningProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+        <state relative-caret-position="91">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setSimulator#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readDescriptions#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readRiskAndCost#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#readParameters#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getReleases#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRequirements#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#getRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateScore#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#calculateRisk#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="docComment;method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#evaluatePrecedences#0;class#ReleasePlanningProblem#0" expanded="false" />
-            <element signature="method#setCustomerSatisfaction#0;class#ReleasePlanningProblem#0" expanded="false" />
+            <element signature="class#2577:2891" expanded="false" />
+            <element signature="class#2939:3248" expanded="false" />
+            <element signature="e#5184#5185#0" expanded="true" />
+            <element signature="e#5215#5216#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5384#5385#0" expanded="true" />
+            <element signature="e#7781#7782#0" expanded="true" />
+            <element signature="e#7816#7817#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jmetal/core/SolutionSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="254" column="14" lean-forward="false" selection-start-line="254" selection-start-column="14" selection-end-line="254" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="249">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/sample/KnapSackVariant/gGA.java">
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="22" />
+        <state relative-caret-position="130">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/geneticAlgorithm/gGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
           <folding>
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/PriorizationProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="104" column="28" lean-forward="false" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-          <folding>
-            <element signature="method#evaluate#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#contrainsViolated#0;class#PriorizationProblem#0" expanded="false" />
-            <element signature="method#readBugsConfig#0;class#PriorizationProblem#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/ProblemWithSelectionFactor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state relative-caret-position="663">
+          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="99" column="25" lean-forward="true" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="93" />
           <folding>
+            <element signature="method#configProblem#0;class#GA_test#0" expanded="false" />
             <element signature="method#configAlgorithm#0;class#GA_test#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/uece/goes/selectionFactor/test/GA_test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1595,7 +1915,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SelectionFactor_test|SelectionFactor</last-edited>
+          <last-edited>SelectionFactor</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

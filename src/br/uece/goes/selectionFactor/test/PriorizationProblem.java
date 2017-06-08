@@ -11,6 +11,7 @@ import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
 import jmetal.core.Solution;
 import jmetal.core.Variable;
 import jmetal.encodings.solutionType.IntSolutionType;
+import jmetal.encodings.solutionType.RankPermutationSolutionType;
 import jmetal.util.JMException;
 
 /**
@@ -48,7 +49,8 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
             upperLimit_[i] = n_bugs - 1;
         }
         try {
-            solutionType_ = new IntSolutionType(this);
+            //solutionType_ = new IntSolutionType(this);
+            solutionType_ = new RankPermutationSolutionType(this,numberOfVariables_);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -137,27 +139,6 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
                 //return -func_risk;
             }
         });
-
-//        /* restrições */
-//        addEvaluator(new Evaluator(this) {
-//            @Override
-//            public double evaluate(Solution solution) throws JMException{
-//
-//                Variable _variable[] = solution.getDecisionVariables();
-//                Integer variable[] = new Integer[_variable.length];
-//
-//                for (int i = 0; i < variable.length; i++)
-//                    variable[i] = (int) _variable[i].getValue();
-//
-//                int constrains_violated = contrainsViolated(variable);
-//
-//                if (constrains_violated == 0) {
-//                    return 1;
-//                } else {
-//                    return 0;
-//                }
-//            }
-//        });
 
     }
 

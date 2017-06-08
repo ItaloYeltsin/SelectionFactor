@@ -11,22 +11,23 @@ public class main {
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, JMException {
         GA_test ga = new GA_test();
+        GA_test2 ga2 = new GA_test2();
 
-        for (int i=0; i<30;i++){
-            ga.main("Priorization","",-1,3);
-        }
-
-        for (int i=0; i<30;i++){
-            ga.main("Priorization","_0",0,1);
-        }
-
-        for (int i=0; i<30;i++){
-            ga.main("Priorization","_1",1,1);
-        }
-
-        for (int i=0; i<30;i++){
-            ga.main("Priorization","_2",2,1);
-        }
+//        for (int i=0; i<30;i++){
+//            ga.main("Priorization","",-1,3);
+//        }
+//
+//        for (int i=0; i<30;i++){
+//            ga.main("Priorization","_0",0,1);
+//        }
+//
+//        for (int i=0; i<30;i++){
+//            ga.main("Priorization","_1",1,1);
+//        }
+//
+//        for (int i=0; i<30;i++){
+//            ga.main("Priorization","_2",2,1);
+//        }
 
 
 //        for (int i=0; i<30;i++){
@@ -37,10 +38,17 @@ public class main {
 //            ga.main("ReleasePlanning","_0",0,1);
 //        }
 //
-//        for (int i=0; i<30;i++){
+//         for (int i=0; i<30;i++){
 //            ga.main("ReleasePlanning","_1",1,1);
 //        }
 
+//        for (int i=0; i<30;i++){
+//            ga2.main("Priorization","_N",-1,3);
+//        }
+
+        for (int i=0; i<30;i++){
+            ga2.main("ReleasePlanning","_N",-1,2);
+        }
 
 
     }

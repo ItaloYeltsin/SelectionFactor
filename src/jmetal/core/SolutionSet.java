@@ -252,7 +252,7 @@ public class SolutionSet implements Serializable {
   } // printObjectivesToFile
 
 
-  public void printObjectivesToFile(String path,double[] abs,int cont){
+  public void printObjectivesToFile(String path,double[] abs){
     try {
       /* Open the file */
       FileOutputStream fos   = new FileOutputStream(path,true)     ;
@@ -260,7 +260,7 @@ public class SolutionSet implements Serializable {
       BufferedWriter bw      = new BufferedWriter(osw)        ;
 
       for (Solution aSolutionsList_ : solutionsList_) {
-        for (int i = 0; i < cont; i++) {
+        for (int i = 0; i < abs.length; i++) {
           bw.write(abs[i]+" ");
         }
         bw.newLine();

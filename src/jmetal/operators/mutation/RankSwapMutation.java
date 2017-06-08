@@ -21,12 +21,12 @@
 
 package jmetal.operators.mutation;
 
+import br.uece.goes.selectionFactor.test.PriorizationProblem;
 import jmetal.core.Solution;
 import jmetal.core.Variable;
 import jmetal.encodings.solutionType.PermutationSolutionType;
 import jmetal.encodings.solutionType.RankPermutationSolutionType;
 import jmetal.encodings.variable.Permutation;
-import jmetal.problems.DynBugPrioritization;
 import jmetal.util.Configuration;
 import jmetal.util.JMException;
 import jmetal.util.PseudoRandom;
@@ -76,7 +76,7 @@ public class RankSwapMutation extends Mutation{
     
 	    if (solution.getType().getClass() == RankPermutationSolutionType.class) {
 	      
-	    	DynBugPrioritization problem = (DynBugPrioritization)solution.getProblem();
+	    	PriorizationProblem problem = (PriorizationProblem)solution.getProblem();
 	    	ArrayList<Integer> bugPosition = new ArrayList<Integer>((int)problem.getUpperLimit(0));
 	    	
 	    	Variable [] vars = solution.getDecisionVariables();
@@ -108,7 +108,7 @@ public class RankSwapMutation extends Mutation{
 	      Configuration.logger_.severe("RankSwapMutation.doMutation: invalid type. " +
 	          ""+ solution.getDecisionVariables()[0].getVariableType());
 
-	      Class cls = java.lang.String.class;
+	      Class cls = String.class;
 	      String name = cls.getName(); 
 	      throw new JMException("Exception in " + name + ".doMutation()") ;
 	    }
@@ -124,16 +124,16 @@ public class RankSwapMutation extends Mutation{
     Solution solution = (Solution)object;
     
 		if (!VALID_TYPES.contains(solution.getType().getClass())) {
-			Configuration.logger_.severe("SwapMutation.execute: the solution " +
+			Configuration.logger_.severe("RankSwapMutation.execute: the solution " +
 					"is not of the right type. The type should be 'Binary', " +
 					"'BinaryReal' or 'Int', but " + solution.getType() + " is obtained");
 
-			Class cls = java.lang.String.class;
+			Class cls = String.class;
 			String name = cls.getName();
 			throw new JMException("Exception in " + name + ".execute()");
-		} // if 
+		} // if
 
-	mutationProbability_ = (Double) parameters_.get("probability") ;  	
+	mutationProbability_ = (Double) parameters_.get("probability") ;
     this.doMutation(mutationProbability_, solution);
     return solution;
   } // execute  
