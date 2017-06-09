@@ -1,9 +1,5 @@
 package br.uece.goes.selectionFactor.test;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import br.uece.goes.selectionFactor.Evaluator;
 import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
 import jmetal.core.Solution;
@@ -11,6 +7,10 @@ import jmetal.core.Variable;
 import jmetal.encodings.solutionType.IntSolutionType;
 import jmetal.util.InstanceReader;
 import jmetal.util.JMException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * The Release Planning Problem Class

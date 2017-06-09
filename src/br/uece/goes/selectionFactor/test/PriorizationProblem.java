@@ -1,18 +1,17 @@
 package br.uece.goes.selectionFactor.test;
 
+import br.uece.goes.selectionFactor.Evaluator;
+import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
+import jmetal.core.Solution;
+import jmetal.core.Variable;
+import jmetal.encodings.solutionType.RankPermutationSolutionType;
+import jmetal.util.JMException;
+
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-
-import br.uece.goes.selectionFactor.Evaluator;
-import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
-import jmetal.core.Solution;
-import jmetal.core.Variable;
-import jmetal.encodings.solutionType.IntSolutionType;
-import jmetal.encodings.solutionType.RankPermutationSolutionType;
-import jmetal.util.JMException;
 
 /**
  * Created by Raphael on 24/05/2017.
