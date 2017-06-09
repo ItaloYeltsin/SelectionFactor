@@ -47,7 +47,7 @@ public class main {
 //        }
 
         for (int i=0; i<30;i++){
-            ga2.main("ReleasePlanning","_N",-1,2);
+            ga2.main("ReleasePlanning","_N",-1,1);
         }
 
 

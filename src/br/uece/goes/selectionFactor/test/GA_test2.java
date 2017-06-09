@@ -21,12 +21,9 @@
 
 package br.uece.goes.selectionFactor.test;
 
-import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
-import br.uece.goes.selectionFactor.sample.KnapSackVariant.gGA;
 import jmetal.core.Algorithm;
 import jmetal.core.Operator;
 import jmetal.core.Problem;
-import jmetal.core.SolutionSet;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
@@ -42,47 +39,23 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class GA_test2 {
+public class GA_test2 extends Teste{
 
-  public void main(String problemName,String complement,int cont,int cont2) throws JMException, ClassNotFoundException, IOException {
-
-
-    Problem problem = configProblem(problemName,cont);
-    SolutionSet population = configAlgorithm(problemName,problem);
-
-    ProblemWithSelectionFactor problemSelectionFactor = (ProblemWithSelectionFactor) problem;
-
-    double[] value = new double[cont2];
-
-    for (int i = 0; i < cont2; i++) {
-      value[i] = problemSelectionFactor.getEvaluator(i).evaluate(population.get(0));
-      System.out.println(value[i]);
-    }
-
-        /* Log messages */
-    new File("results").mkdirs();
-    population.printObjectivesToFile("results/"+problemName+complement+"_FUN.txt",value);
-    population.printVariablesToFile("results/"+problemName+complement+"_VAR.txt");
-
-  } //main
-
-
-  Problem configProblem(String problemName,int index) throws IOException {
-
-    Problem problem=null ;
-
-    if(problemName=="Priorization"){
-      problem = new PriorizationProblem("dataset_inst100.txt");
-
-    }else if(problemName=="ReleasePlanning"){
-      problem = new ReleasePlanningProblem("src\\instances\\data-set-1.rp");
-    }
-
-    return problem;
-
+  public GA_test2() {
+    super("ReleasePlanning");
   }
 
-  SolutionSet configAlgorithm(String problemName,Problem problem) throws JMException, ClassNotFoundException {
+  @Override
+  protected Problem configProblem(){
+    try {
+      return new ReleasePlanningProblem("src"+File.separator+"instances"+File.separator+"data-set-1.rp");
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  protected Algorithm configAlgorithm() throws JMException {
 
     Algorithm algorithm;         // The algorithm to use
     Operator crossover =null ;         // Crossover operator
@@ -96,29 +69,15 @@ public class GA_test2 {
     algorithm.setInputParameter("populationSize", 100);
     algorithm.setInputParameter("maxEvaluations", 1000);
 
-    if(problemName=="ReleasePlanning") {
+    // Mutation and Crossover for Binary codification
+    parameters = new HashMap();
+    parameters.put("probability", 0.9);
+    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
 
-      // Mutation and Crossover for Binary codification
-      parameters = new HashMap();
-      parameters.put("probability", 0.9);
-      crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
+    parameters = new HashMap();
+    parameters.put("probability", 0.01);
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
 
-      parameters = new HashMap();
-      parameters.put("probability", 0.01);
-      mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
-
-    } else if(problemName=="Priorization"){
-
-      // Mutation and Crossover for Binary codification
-      parameters = new HashMap();
-      parameters.put("probability", 0.9);
-      crossover = CrossoverFactory.getCrossoverOperator("OrderOneCrossover", parameters);
-
-      parameters = new HashMap();
-      parameters.put("probability", 0.01);
-      mutation = MutationFactory.getMutationOperator("RankSwapMutation", parameters);
-
-    }
 
     /* Selection Operator */
     parameters = null;
@@ -130,7 +89,7 @@ public class GA_test2 {
     algorithm.addOperator("selection",selection);
 
 
-    return algorithm.execute();
+    return algorithm;
   }
 
 } // GA_main

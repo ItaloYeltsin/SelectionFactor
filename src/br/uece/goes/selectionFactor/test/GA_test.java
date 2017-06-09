@@ -39,7 +39,7 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class GA_test {
+public class GA_test extends Teste{
 
   public void main(String problemName,String complement,int cont,int cont2) throws JMException, ClassNotFoundException, IOException {
 

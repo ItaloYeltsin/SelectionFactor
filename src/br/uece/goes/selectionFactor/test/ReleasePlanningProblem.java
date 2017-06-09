@@ -114,7 +114,7 @@ public class ReleasePlanningProblem extends ProblemWithSelectionFactor {
                 double solutionScore = 0;
                 solutionScore = calculateScore(solution);
 
-                return -solutionScore/ (1 + evaluatePrecedences(solution));
+                return -solutionScore;
             }
         });
 
@@ -125,11 +125,17 @@ public class ReleasePlanningProblem extends ProblemWithSelectionFactor {
                 double solutionRisk = 0;
                 solutionRisk = calculateRisk(solution);
 
-                return solutionRisk/ (1 + evaluatePrecedences(solution));
+                return solutionRisk;
             }
         });
 
+        addEvaluator(new Evaluator(this) {
+            @Override
+            public double evaluate(Solution solution) throws JMException {
 
+                return evaluatePrecedences(solution);
+            }
+        }, 50);
     }
 
     @Override

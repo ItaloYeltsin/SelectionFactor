@@ -26,7 +26,7 @@ public abstract class ProblemWithSelectionFactor extends Problem {
         weights_.set(index, weight);
     }
 
-    public int getNumberOfEvaluation() {
+    public int getNumberOfEvaluators() {
         return evaluators_.size();
 
     }
