@@ -1,4 +1,4 @@
-package br.uece.goes.selectionFactor.test;
+package br.uece.goes.selectionFactor.test.rplanner;
 
 import br.uece.goes.selectionFactor.Evaluator;
 import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
@@ -51,8 +51,6 @@ public class ReleasePlanningProblem extends ProblemWithSelectionFactor {
     private int[][] precedence;
 
     private double alpha = 1; // feedback weight
-
-    private ArrayList<HashMap> preferenceList;
 
     private String[] reqDescriptions;
 
@@ -144,7 +142,7 @@ public class ReleasePlanningProblem extends ProblemWithSelectionFactor {
         double solutionRisk = 0;
         solutionScore = calculateScore(solution);
         solutionRisk = calculateRisk(solution);
-        double utility = solutionScore - solutionRisk;
+        double utility = (solutionScore - solutionRisk)/(evaluatePrecedences(solution)+1);
 
         solution.setObjective(0, -utility ); // objective
     }
@@ -316,4 +314,11 @@ public class ReleasePlanningProblem extends ProblemWithSelectionFactor {
     }
 
 
+    public double getCost(int i) {
+        return cost[i];
+    }
+
+    public double getBudget(int i) {
+        return releaseCost[i-1];
+    }
 } // ReleasePlanningProblem
