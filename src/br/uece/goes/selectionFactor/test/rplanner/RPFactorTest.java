@@ -19,11 +19,11 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class RPFitnessTest extends Teste {
+public class RPFactorTest extends Teste {
 
-  public RPFitnessTest() {
-    super("ReleasePlanning");
-    instance = "dataset-2";
+  public RPFactorTest() {
+    super("ReleasePlanning_FACTOR");
+    super.instance = "dataset-2";
   }
 
   @Override
@@ -44,7 +44,7 @@ public class RPFitnessTest extends Teste {
     Operator  selection;         // Selection operator
     HashMap  parameters ; // Operator parameters
 
-    algorithm = new FitnessGA(problem); // Generational GA
+    algorithm = new FactorGA(problem); // Generational GA
 
         /* Algorithm parameters*/
     algorithm.setInputParameter("populationSize", super.POPULATION_SIZE);

@@ -1,16 +1,16 @@
-package br.uece.goes.selectionFactor.test.rplanner;
+package br.uece.goes.selectionFactor.test.bp;
 
+import br.uece.goes.selectionFactor.Evaluator;
 import br.uece.goes.selectionFactor.test.Teste;
 import jmetal.core.Algorithm;
 import jmetal.core.Operator;
 import jmetal.core.Problem;
+import jmetal.core.Solution;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
 import jmetal.util.JMException;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -19,21 +19,26 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class RPFitnessTest extends Teste {
+public class BPMinMaxTest extends Teste {
 
-  public RPFitnessTest() {
-    super("ReleasePlanning");
-    instance = "dataset-2";
+  public BPMinMaxTest() {
+    super("BugPrioritization_MAX_IMPORTANCE");
+    instance = "dataset_inst100";
   }
 
   @Override
   protected Problem configProblem(){
-    try {
-      return new ReleasePlanningProblem("src"+File.separator+"instances"+File.separator+instance+".rp");
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return null;
+    PriorizationProblem p = new PriorizationProblem(instance+".txt");
+    Evaluator eval = p.getEvaluator(0);
+    p.removeEvaluator(1);
+    p.removeEvaluator(1);
+    p.setEvaluator(0, new Evaluator(p) {
+      @Override
+      public double evaluate(Solution solution) throws JMException {
+        return eval.evaluate(solution);
+      }
+    });
+    return p;
   }
 
   protected Algorithm configAlgorithm() throws JMException {
@@ -44,7 +49,7 @@ public class RPFitnessTest extends Teste {
     Operator  selection;         // Selection operator
     HashMap  parameters ; // Operator parameters
 
-    algorithm = new FitnessGA(problem); // Generational GA
+    algorithm = new FactorGA(problem); // Generational GA
 
         /* Algorithm parameters*/
     algorithm.setInputParameter("populationSize", super.POPULATION_SIZE);
@@ -53,11 +58,11 @@ public class RPFitnessTest extends Teste {
     // Mutation and Crossover for Binary codification
     parameters = new HashMap();
     parameters.put("probability", 0.9);
-    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
+    crossover = CrossoverFactory.getCrossoverOperator("OrderOneCrossover", parameters);
 
     parameters = new HashMap();
-    parameters.put("probability", 0.01);
-    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
+    parameters.put("probability", 0.2);
+    mutation = MutationFactory.getMutationOperator("RankSwapMutation", parameters);
 
 
     /* Selection Operator */

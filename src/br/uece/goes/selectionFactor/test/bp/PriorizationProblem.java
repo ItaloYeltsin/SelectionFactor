@@ -1,4 +1,4 @@
-package br.uece.goes.selectionFactor.test;
+package br.uece.goes.selectionFactor.test.bp;
 
 import br.uece.goes.selectionFactor.Evaluator;
 import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
@@ -34,7 +34,7 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
     public PriorizationProblem(String filename){
 
 
-        readBugsConfig("src\\instances\\" + filename);
+        readBugsConfig("src"+File.separator+"instances"+File.separator + filename);
         numberOfVariables_ = n_bugs_selecionados;
         numberOfObjectives_ = 1;
         numberOfConstraints_ = 0;
@@ -54,7 +54,7 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
             e.printStackTrace();
         }
 
-        /* importance */
+        /* priority */
         addEvaluator(new Evaluator(this) {
             @Override
             public double evaluate(Solution solution) throws JMException{
@@ -72,17 +72,12 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
                     func_importance += priority[variable[i]]  * (n_bugs_selecionados - i);
                 }
 
-                if (contrainsViolated(variable) == 0) {
-                    return -func_importance;
-                } else {
-                    return -func_importance+90000;
-                }
-
+                return -func_importance;
              //   return func_importance;
             }
         });
 
-        /* score */
+        /* votes */
         addEvaluator(new Evaluator(this) {
             @Override
             public double evaluate(Solution solution) throws JMException{
@@ -96,16 +91,11 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
                 func_score = 0;
 
                 for (int i = 0; i < n_bugs_selecionados; i++) {
-
                     func_score += score[variable[i]] * (n_bugs_selecionados - i);
                 }
 
-                if (contrainsViolated(variable) == 0) {
-                    return -func_score;
-                } else {
-                    return -func_score+90000;
-                }
 
+                return -func_score;
                 //return func_score;
             }
         });
@@ -126,19 +116,21 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
                 for (int i = 0; i < n_bugs_selecionados; i++) {
                     func_risk += severity[variable[i]] * (i + 1);
                 }
-
-
-                if (contrainsViolated(variable) == 0) {
-                    return func_risk;
-                } else {
-                    return func_risk+90000;
-                }
-
-
-                //return -func_risk;
+                return func_risk;
             }
         });
 
+        addEvaluator(new Evaluator(this) {
+            @Override
+            public double evaluate(Solution solution) throws JMException {
+                Variable _variable[] = solution.getDecisionVariables();
+                Integer variable[] = new Integer[_variable.length];
+
+                for (int i = 0; i < variable.length; i++)
+                    variable[i] = (int) _variable[i].getValue();
+                return contrainsViolated(variable);
+            }
+        }, 100);
     }
 
     @Override
@@ -170,6 +162,7 @@ public class PriorizationProblem extends ProblemWithSelectionFactor {
         } else {
             solution.setObjective(0, -fitness + 9000000);
         }
+
     }
 
     public int contrainsViolated(Integer variable[]) {

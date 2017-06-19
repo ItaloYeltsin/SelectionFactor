@@ -1,9 +1,12 @@
 package br.uece.goes.selectionFactor.test.rplanner;
 
+import br.uece.goes.selectionFactor.Evaluator;
+import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
 import br.uece.goes.selectionFactor.test.Teste;
 import jmetal.core.Algorithm;
 import jmetal.core.Operator;
 import jmetal.core.Problem;
+import jmetal.core.Solution;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
@@ -19,17 +22,31 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class RPFitnessTest extends Teste {
+public class RPMinMaxTest extends Teste {
 
-  public RPFitnessTest() {
-    super("ReleasePlanning");
+  public RPMinMaxTest() {
+    super("ReleasePlanning_MAX_RISK");
     instance = "dataset-2";
   }
 
   @Override
   protected Problem configProblem(){
     try {
-      return new ReleasePlanningProblem("src"+File.separator+"instances"+File.separator+instance+".rp");
+      ProblemWithSelectionFactor problem =
+              new ReleasePlanningProblem(
+                      "src"+File.separator+"instances"+File.separator+instance+".rp");
+
+      Evaluator eval = problem.getEvaluator(1); // 0 or 1
+      problem.removeEvaluator(0);
+      problem.setEvaluator(0, new Evaluator(problem) {
+        @Override
+        public double evaluate(Solution solution) throws JMException {
+          return eval.evaluate(solution); // Times -1 to get Min
+        }
+      });
+
+      return problem;
+
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -44,7 +61,7 @@ public class RPFitnessTest extends Teste {
     Operator  selection;         // Selection operator
     HashMap  parameters ; // Operator parameters
 
-    algorithm = new FitnessGA(problem); // Generational GA
+    algorithm = new FactorGA(problem); // Generational GA
 
         /* Algorithm parameters*/
     algorithm.setInputParameter("populationSize", super.POPULATION_SIZE);

@@ -1,4 +1,4 @@
-package br.uece.goes.selectionFactor.test.rplanner;
+package br.uece.goes.selectionFactor.test.bp;
 
 import br.uece.goes.selectionFactor.test.Teste;
 import jmetal.core.Algorithm;
@@ -9,8 +9,6 @@ import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
 import jmetal.util.JMException;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -19,21 +17,16 @@ import java.util.HashMap;
  * cGA (class scGA) or an asynchronous cGA (class acGA). The OneMax
  * problem is used to test the algorithms.
  */
-public class RPFitnessTest extends Teste {
+public class BPFitnessTest extends Teste {
 
-  public RPFitnessTest() {
-    super("ReleasePlanning");
-    instance = "dataset-2";
+  public BPFitnessTest() {
+    super("BugPrioritization_FITNESS");
+    super.instance = "dataset_inst100";
   }
 
   @Override
   protected Problem configProblem(){
-    try {
-      return new ReleasePlanningProblem("src"+File.separator+"instances"+File.separator+instance+".rp");
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    return null;
+    return new PriorizationProblem(instance+".txt");
   }
 
   protected Algorithm configAlgorithm() throws JMException {
@@ -53,12 +46,11 @@ public class RPFitnessTest extends Teste {
     // Mutation and Crossover for Binary codification
     parameters = new HashMap();
     parameters.put("probability", 0.9);
-    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
+    crossover = CrossoverFactory.getCrossoverOperator("OrderOneCrossover", parameters);
 
     parameters = new HashMap();
-    parameters.put("probability", 0.01);
-    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
-
+    parameters.put("probability", 0.2);
+    mutation = MutationFactory.getMutationOperator("RankSwapMutation", parameters);
 
     /* Selection Operator */
     parameters = null;

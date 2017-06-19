@@ -23,6 +23,7 @@ package br.uece.goes.selectionFactor.test;
 
 import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
 import br.uece.goes.selectionFactor.sample.KnapSackVariant.gGA;
+import br.uece.goes.selectionFactor.test.bp.PriorizationProblem;
 import br.uece.goes.selectionFactor.test.rplanner.ReleasePlanningProblem;
 import jmetal.core.*;
 import jmetal.operators.crossover.CrossoverFactory;

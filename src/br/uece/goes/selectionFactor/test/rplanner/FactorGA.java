@@ -1,18 +1,14 @@
 package br.uece.goes.selectionFactor.test.rplanner;
 
+import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
+import jmetal.core.*;
+import jmetal.util.JMException;
+import jmetal.util.comparators.ObjectiveComparator;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
-
-import jmetal.core.Algorithm;
-import jmetal.core.Operator;
-import jmetal.core.Problem;
-import jmetal.core.Solution;
-import jmetal.core.SolutionSet;
-import jmetal.core.Variable;
-import jmetal.util.JMException;
-import jmetal.util.comparators.ObjectiveComparator;
 
 /**
  * The Release Planning Problem Class
@@ -23,7 +19,7 @@ import jmetal.util.comparators.ObjectiveComparator;
  *
  */
 
-public class FitnessGA extends Algorithm {
+public class FactorGA extends Algorithm {
 
     private static final boolean DEBUG_SHOW_CURRENT_BEST_SOLUTION = false;
 
@@ -73,12 +69,12 @@ public class FitnessGA extends Algorithm {
      * @param problem
      *            Problem to solve.
      */
-    public FitnessGA(Problem problem) {
+    public FactorGA(Problem problem) {
         super(problem);
 
 		/* Algorithm parameters */
         //setInputParameter("populationSize", FitnessGA.POPULATION_SIZE);
-        setInputParameter("elitismRate", FitnessGA.ELITISM_RATE);
+        setInputParameter("elitismRate", FactorGA.ELITISM_RATE);
         //setInputParameter("nGens", FitnessGA.N_GENS);
         //setInputParameter("crossoverRate", 0.9);
         //setInputParameter("mutationRate", 0.01);
@@ -113,8 +109,10 @@ public class FitnessGA extends Algorithm {
 
         // Read the operators
         mutationOperator = this.operators_.get("mutation");
-        crossoverOperator = this.operators_.get("crossover" );
+        crossoverOperator = this.operators_.get("crossover");
         selectionOperator = this.operators_.get("selection");
+
+
         createInitialPopulation();
         executeBy(nGens);
         interactiveSolution = population.get(0);
@@ -128,21 +126,20 @@ public class FitnessGA extends Algorithm {
 
     private void createInitialPopulation() throws ClassNotFoundException,
             JMException {
+        ProblemWithSelectionFactor psf = (ProblemWithSelectionFactor)problem_;
         for (int i = 0; i < populationSize; i++) {
             Solution newIndividual = new Solution(problem_);
             repairSolution(newIndividual);
-            problem_.evaluate(newIndividual);
-
             population.add(newIndividual);
         }
-
+        psf.evaluate(population);
         // Sort population
         population.sort(comparator);
     }
 
     public void executeOneGeneration() throws JMException {
         generation++;
-
+        ProblemWithSelectionFactor psf = (ProblemWithSelectionFactor)problem_;
         // Copy the best individuals to the offspring population
         for (int i = 0; i < elitismRate; i++) {
             offspringPopulation.add(new Solution(population.get(i)));
@@ -181,9 +178,9 @@ public class FitnessGA extends Algorithm {
         population.clear();
 
         for (int i = 0; i < populationSize; i++) {
-            problem_.evaluate(offspringPopulation.get(i));
             population.add(offspringPopulation.get(i));
         }
+        psf.evaluate(offspringPopulation);
         offspringPopulation.clear();
         population.sort(comparator);
 

@@ -1,18 +1,15 @@
-package br.uece.goes.selectionFactor.test.rplanner;
+package br.uece.goes.selectionFactor.test.bp;
+
+import br.uece.goes.selectionFactor.ProblemWithSelectionFactor;
+import br.uece.goes.selectionFactor.test.rplanner.ReleasePlanningProblem;
+import jmetal.core.*;
+import jmetal.util.JMException;
+import jmetal.util.comparators.ObjectiveComparator;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
-
-import jmetal.core.Algorithm;
-import jmetal.core.Operator;
-import jmetal.core.Problem;
-import jmetal.core.Solution;
-import jmetal.core.SolutionSet;
-import jmetal.core.Variable;
-import jmetal.util.JMException;
-import jmetal.util.comparators.ObjectiveComparator;
 
 /**
  * The Release Planning Problem Class
@@ -23,7 +20,7 @@ import jmetal.util.comparators.ObjectiveComparator;
  *
  */
 
-public class FitnessGA extends Algorithm {
+public class FactorGA extends Algorithm {
 
     private static final boolean DEBUG_SHOW_CURRENT_BEST_SOLUTION = false;
 
@@ -73,12 +70,12 @@ public class FitnessGA extends Algorithm {
      * @param problem
      *            Problem to solve.
      */
-    public FitnessGA(Problem problem) {
+    public FactorGA(Problem problem) {
         super(problem);
 
 		/* Algorithm parameters */
         //setInputParameter("populationSize", FitnessGA.POPULATION_SIZE);
-        setInputParameter("elitismRate", FitnessGA.ELITISM_RATE);
+        setInputParameter("elitismRate", FactorGA.ELITISM_RATE);
         //setInputParameter("nGens", FitnessGA.N_GENS);
         //setInputParameter("crossoverRate", 0.9);
         //setInputParameter("mutationRate", 0.01);
@@ -93,8 +90,6 @@ public class FitnessGA extends Algorithm {
      * @throws JMException
      */
     public SolutionSet execute() throws JMException, ClassNotFoundException {
-        ReleasePlanningProblem rpp = (ReleasePlanningProblem) problem_;
-
         comparator = new ObjectiveComparator(0); // Single objective comparator
 
         // Read the params
@@ -113,8 +108,10 @@ public class FitnessGA extends Algorithm {
 
         // Read the operators
         mutationOperator = this.operators_.get("mutation");
-        crossoverOperator = this.operators_.get("crossover" );
+        crossoverOperator = this.operators_.get("crossover");
         selectionOperator = this.operators_.get("selection");
+
+
         createInitialPopulation();
         executeBy(nGens);
         interactiveSolution = population.get(0);
@@ -128,21 +125,19 @@ public class FitnessGA extends Algorithm {
 
     private void createInitialPopulation() throws ClassNotFoundException,
             JMException {
+        ProblemWithSelectionFactor psf = (ProblemWithSelectionFactor)problem_;
         for (int i = 0; i < populationSize; i++) {
             Solution newIndividual = new Solution(problem_);
-            repairSolution(newIndividual);
-            problem_.evaluate(newIndividual);
-
             population.add(newIndividual);
         }
-
+        psf.evaluate(population);
         // Sort population
         population.sort(comparator);
     }
 
     public void executeOneGeneration() throws JMException {
         generation++;
-
+        ProblemWithSelectionFactor psf = (ProblemWithSelectionFactor)problem_;
         // Copy the best individuals to the offspring population
         for (int i = 0; i < elitismRate; i++) {
             offspringPopulation.add(new Solution(population.get(i)));
@@ -165,10 +160,6 @@ public class FitnessGA extends Algorithm {
             mutationOperator.execute(offspring[0]);
             mutationOperator.execute(offspring[1]);
 
-            // Repair Invalid Individual
-            repairSolution(offspring[0]);
-            repairSolution(offspring[1]);
-
             // Replacement: the two new individuals are inserted in the
             // offspring
             // population
@@ -181,9 +172,9 @@ public class FitnessGA extends Algorithm {
         population.clear();
 
         for (int i = 0; i < populationSize; i++) {
-            problem_.evaluate(offspringPopulation.get(i));
             population.add(offspringPopulation.get(i));
         }
+        psf.evaluate(offspringPopulation);
         offspringPopulation.clear();
         population.sort(comparator);
 
@@ -208,155 +199,6 @@ public class FitnessGA extends Algorithm {
         }
     }
 
-    /**
-     * Repair a solution that breaks the bound of some release
-     *
-     * @param A
-     *            Solution
-     */
-    public void repairSolution(Solution solution) throws JMException {
-
-        Variable[] individual = solution.getDecisionVariables();
-        int[] indices = new int[(int) problem_.getUpperLimit(0)];
-        int[] orderIndices = new int[(int) problem_.getUpperLimit(0)];
-        double[] releasesCost = new double[(int) problem_.getUpperLimit(0)];
-
-        for (int i = 0; i < releasesCost.length; i++) {
-            indices[i] = i + 1;
-            orderIndices[i] = i + 1;
-            releasesCost[i] = calculateReleaseCost(solution, i + 1);
-        }
-
-        suffle(indices);
-
-        for (int i = 0; i < releasesCost.length; i++) {
-            int index = indices[i];
-
-            if (releasesCost[index - 1] > getBudget(index)) {
-                // Begining of Repair
-                int[] listOfRequirements = getSetOfRequirements(index, solution);
-                suffle(listOfRequirements);
-                suffle(orderIndices);
-
-                for (int j = 0; (j < listOfRequirements.length && releasesCost[index - 1] > getBudget(index)); j++) {
-                    boolean wasChanged = false;
-
-                    for (int k = 0; k < orderIndices.length; k++) {
-
-                        double simulatedCost = getRequirementCost(listOfRequirements[j])
-                                + releasesCost[orderIndices[k] - 1];
-                        if (simulatedCost <= getBudget(orderIndices[k])) {
-                            releasesCost[index - 1] -= getRequirementCost(listOfRequirements[j]);
-                            releasesCost[orderIndices[k] - 1] = simulatedCost;
-                            individual[listOfRequirements[j]]
-                                    .setValue(orderIndices[k]);
-                            wasChanged = true;
-                            break;
-                        }
-
-                    }
-                    if (!wasChanged) {
-                        releasesCost[index - 1] -= getRequirementCost(listOfRequirements[j]);
-                        individual[listOfRequirements[j]].setValue(0);
-                    }
-                }
-            }
-        }
-
-    } // repairSolution
-
-    /**
-     *
-     * @param release
-     * @param solution
-     * @return A vector with the Set of Requirements of a given Release
-     * @throws JMException
-     */
-    private int[] getSetOfRequirements(int release, Solution solution)
-            throws JMException {
-        ArrayList<Integer> p = new ArrayList<Integer>();
-        Variable[] individual = solution.getDecisionVariables();
-        int[] vet;
-        for (int i = 0; i < individual.length; i++) {
-            if ((int) individual[i].getValue() == release) {
-                p.add(i);
-            }
-        }
-        vet = new int[p.size()];
-
-        int count = 0;
-        for (@SuppressWarnings("rawtypes")
-             Iterator iterator = p.iterator(); iterator.hasNext();) {
-            Integer integer = (Integer) iterator.next();
-            vet[count++] = integer;
-        }
-        return vet;
-    }
-
-    /**
-     *
-     * @param solution
-     * @param release
-     * @return The cost of a given release in a given solution
-     * @throws JMException
-     */
-    public double calculateReleaseCost(Solution solution, int release)
-            throws JMException {
-        double cost = 0.0;
-        Variable[] individual = solution.getDecisionVariables();
-
-        for (int i = 0; i < individual.length; i++) {
-            if ((int) individual[i].getValue() == release) {
-                cost += getRequirementCost(i);
-            }
-        }
-
-        return cost;
-    }
-
-    /**
-     * @param Requirement
-     *            ID
-     * @return Requirement Cost
-     */
-    private double getRequirementCost(int i) {
-        ReleasePlanningProblem p = (ReleasePlanningProblem) problem_;
-        return p.getCost(i);
-    }
-
-    /**
-     *
-     * @param Release
-     *            ID
-     * @return The Budget of a given release
-     */
-    private double getBudget(int i) {
-        ReleasePlanningProblem p = (ReleasePlanningProblem) problem_;
-        return p.getBudget(i);
-    }
-
-    /**
-     * @param vet
-     */
-    private void suffle(int[] vet) {
-        Random random = new Random();
-        for (int i = 0; i < vet.length; i++) {
-
-            int pos = random.nextInt(vet.length);
-            int aux = vet[i];
-            vet[i] = vet[pos];
-            vet[pos] = aux;
-
-        }
-    }
-
-    public Solution getBestNonInteractiveSolution() {
-        return nonInteractiveSolution;
-    }
-
-    public Solution getBestInteractiveSolution() {
-        return interactiveSolution;
-    }
 
 
 } // IGA

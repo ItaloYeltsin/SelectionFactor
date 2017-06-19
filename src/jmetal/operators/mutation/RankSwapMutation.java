@@ -21,12 +21,10 @@
 
 package jmetal.operators.mutation;
 
-import br.uece.goes.selectionFactor.test.PriorizationProblem;
+import br.uece.goes.selectionFactor.test.bp.PriorizationProblem;
 import jmetal.core.Solution;
 import jmetal.core.Variable;
-import jmetal.encodings.solutionType.PermutationSolutionType;
 import jmetal.encodings.solutionType.RankPermutationSolutionType;
-import jmetal.encodings.variable.Permutation;
 import jmetal.util.Configuration;
 import jmetal.util.JMException;
 import jmetal.util.PseudoRandom;
